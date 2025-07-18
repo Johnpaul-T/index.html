@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Heap Visualizer - T JOHN PAUL</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heap Visualizer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #dbeafe, #f0f9ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e9f0f7;
+      color: #1a237e;
       text-align: center;
-      padding: 40px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    h1 {
-      color: #1e3a8a;
-      font-size: 2.5em;
+    .dark-mode {
+      background-color: #121212;
+      color: #f5f5f5;
     }
 
-    p {
-      font-size: 1.2em;
-      margin: 20px 0;
+    header {
+      padding: 1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
 
-    a.button {
-      text-decoration: none;
-      background-color: #2563eb;
+    .container {
+      padding: 2rem;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #2962ff;
       color: white;
-      padding: 15px 30px;
+      border: none;
       border-radius: 8px;
-      font-size: 1.1em;
-      transition: background-color 0.3s ease;
+      cursor: pointer;
     }
 
-    a.button:hover {
-      background-color: #1d4ed8;
+    .btn:hover {
+      background-color: #0039cb;
+    }
+
+    .toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #ccc;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
     }
 
     footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #555;
+      margin-top: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to the Heap Visualizer</h1>
-  <p>Visualize and interact with Max Heap and Min Heap operations</p>
-  <a class="button" href="heap.html" target="_blank">Open Heap Visualizer</a>
-  <footer>
-    <p>&copy; 2025 T JOHN PAUL</p>
-  </footer>
+  <button class="toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <header>Heap Visualizer</header>
+
+  <div class="container">
+    <h1>Welcome to the Heap Visualizer</h1>
+    <p>Visualize and interact with Max Heap and Min Heap operations</p>
+    <a href="heap.html"><button class="btn">Open Heap Visualizer</button></a>
+  </div>
+
+  <footer>&copy; 2025 T JOHN PAUL</footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
