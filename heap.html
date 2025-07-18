@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heap Visualizer - T JOHN PAUL</title>
+  <style>
+    :root {
+      --bg-light: #f0f9ff;
+      --bg-dark: #1e293b;
+      --text-light: #1e3a8a;
+      --text-dark: #f1f5f9;
+      --button-light: #2563eb;
+      --button-dark: #3b82f6;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: var(--button-light);
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .navbar-title {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .dark-mode-toggle {
+      cursor: pointer;
+      background-color: #ccc;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.dark a.button {
+      background-color: var(--button-dark);
+    }
+
+    body.dark a.button:hover {
+      background-color: #60a5fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-title">Heap Visualizer</div>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <h1>Welcome to the Heap Visualizer</h1>
+  <p>Visualize and interact with Max Heap and Min Heap operations</p>
+  <a class="button" href="heap.html" target="_blank">Open Heap Visualizer</a>
+
+  <footer>
+    <p>&copy; 2025 T JOHN PAUL</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
